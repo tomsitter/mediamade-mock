@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile</title>
+        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="css/fontawesome-stars.css" />
+
+        <script src="js/vendor/modernizr.js"></script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation/foundation.js"></script>
+        <script src="js/foundation/foundation.equalizer.js"></script>
+
+        <link rel="stylesheet" href="css/app.css" />
+        <!-- Icons -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+        <script>
+            $(document).ready(function() {
+                $(document).foundation();
+            });
+        </script>
+    </head>
+    <body>
+        <div id='banner' class='row'>
+            <div id="profile-div" class="column small-12 text-center">
+                <img id='profile-pic' src="img/portrait_placeholder.png">
+            </div>
+        </div> 
+        <div id='profile' class='row' data-equalizer>
+            <div id='left-panel' class='large-3 columns' data-equalizer-watch>
+                <section id="reviews">
+                    <h3 class="text-center">Reviews</h3>
+                    <div class="overall-rating text-center">
+
+                        <h4>Overall Rating</h4>
+
+                        <div class="br-wrapper br-theme-fontawesome-stars">
+                            
+                            <div class="br-widget">
+                                <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected br-current"></a>
+                                <a href="#" data-rating-value="4" data-rating-text="4" class=""></a>
+                                <a href="#" data-rating-value="5" data-rating-text="5" class=""></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="review">
+                        <div class="reviewer">
+                            <img class="review-portrait" src="img/portrait_placeholder.png">
+                            Joe Blow
+                        </div>
+                        <div class="review-rating">
+                        </div>
+                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                <div class="br-widget">
+                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                    <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                    <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
+                                    <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
+                                    <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected br-current"></a>
+                                </div>
+                            </div>
+                        <div class="review-body">
+                            I though that Tom was excellent at what he did ...
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="reviewer">
+                            <img class="review-portrait" src="img/portrait_placeholder.png">
+                            Dan Hardy
+                        </div>
+                        <div class="review-rating">
+                        </div>
+                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                <div class="br-widget">
+                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected br-current"></a>
+                                    <a href="#" data-rating-value="2" data-rating-text="2" class=""></a>
+                                    <a href="#" data-rating-value="3" data-rating-text="3" class=""></a>
+                                    <a href="#" data-rating-value="4" data-rating-text="4" class=""></a>
+                                    <a href="#" data-rating-value="5" data-rating-text="5" class=""></a>
+                                </div>
+                            </div>
+                        <div class="review-body">
+                            I though that Tom was garbage and all his work ...
+                        </div>
+                    </div>
+                </section>
+                <section id="pricing" class="pricing">
+                    <h3 class="text-center">Pricing</h3>
+                    <div id='day-rate'>
+                        $ 1000/day
+                    </div>
+                    <hr>
+                    <div id='past-projects'>
+                        5 projects completed
+                    </div>
+                </section>
+            </div> <!-- end left-panel -->
+            <article id='center-panel' class='large-6 columns' data-equalizer-watch>
+                <nav id="profile-nav" class="text-center">
+                    <h3 class="text-center">Panoramic Media</h3>
+                    <button id="description" class="button small radius secondary">Description</button>
+                    <button id="equipment" class="button small radius secondary">Equipment</button>
+                    <button id="team" class="button small radius secondary">Team</button>
+                </nav>
+                <section id="main">
+                    <p>Here at panoramic media we really like panoramas</p>
+                    <p>sdfsdfsdsf</p>
+                </section>
+            </article> <!-- end center panel -->
+            <section id='right-panel' class='large-3 columns text-center' data-equalizer-watch>
+                <h3>Availability</h3>
+                <div id="availability">
+                    <img src="img/datepicker_grayed.png"></img>
+                </div>
+            </section> <!-- end right panel -->
+        </div>
+    </body>
+</html>

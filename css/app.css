@@ -1,0 +1,171 @@
+/* custom CSS styles */
+
+body {
+	background: #f1f1f1;;
+}
+
+.logo {
+	padding-left:0em;
+}
+.button {
+	background-color: #333;
+	border-color: #000;
+	color: white;
+}
+.button:hover, .button:focus {
+	background-color: #666;
+}
+header h2 {
+	font-weight: normal;
+	padding-top: 1em;
+	font-size: 2em;
+	text-transform: none;
+}
+.banner {
+	height: 480px;
+	background-image: url("http://placekitten.com/2000/1080");
+}
+
+#banner {
+	height:315px;
+	background: url("http://placehold.it/1000x315") no-repeat center;
+}
+
+
+.banner-category {
+	color:#fff;
+	font-size: 1.5em;
+	margin-top: 2em;
+}
+
+.banner-header {
+	color:#fff;
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 40em) {
+	.banner {
+		background: none;
+		height: auto;
+	}
+
+	.banner-fl {
+		background-image: url("http://placekitten.com/256/257");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.banner-cl {
+		background-image: url("http://placekitten.com/257/256");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.banner-pc {
+		background-image: url("http://placekitten.com/255/256");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+}
+
+
+
+.bottomspace {
+	margin-bottom: 2em;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #000;
+	font-family: 'Lobster Two', sans-serif;
+}
+
+/* chapter 3 styling challenge */
+article {
+	padding-bottom: 2em;
+}
+article .left {
+	padding: 0 1em 1em 0;
+}
+article .right {
+	padding: 0 0 1em 1em;
+}
+.topspace {
+	padding-top: 3em;
+}
+.topspace p {
+	font-size: 0.8em;
+	color: #999;
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+footer {
+	padding: 2em 0;
+	color: #999;
+	border-top: 1px solid #ccc;
+}
+footer p {
+	font-size: 0.8em;
+}
+
+.no-pad-right {
+	padding-right: 0;
+}
+.no-pad-left{
+	padding-left: 0;
+}
+
+
+.review {
+	padding: 0.5em;
+	background-color: rgba(100, 100, 100, 0.1);
+	margin-top:0.5em;
+}
+
+.review-body {
+	max-height:3em;
+	padding: 0.25em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.review-rating {
+	padding: 0.25em;
+}
+
+.review-portrait {
+	max-height: 40px;
+	max-width: 40px;
+}
+
+.pricing {
+	padding-top: 1em;
+}
+
+#profile {
+	height: 100%;
+	margin-bottom: 2em;
+}
+
+#left-panel {
+	background-color: #fff;
+}
+
+#center-panel {
+	background-color: #fff;
+}
+
+#right-panel {
+	background-color: #fff;
+}
+
+#profile-div {
+	height: inherit;
+	position: relative;
+}
+
+#profile-pic {
+	position: absolute;
+	bottom: 0;
+	max-width: 100px;
+	transform: translateX(-50%);
+}
