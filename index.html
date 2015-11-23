@@ -1,87 +1,123 @@
-<!doctype html>
-<html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prod | Connect</title>
-    <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css" />
-    <script src="js/vendor/modernizr.js"></script>
-  </head>
-  <body>
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name"></li>
-        <li class="toggle-topbar menu-icon">
-          <a href="#">Menu</a>
-        </li>
-      </ul>
-      <section class="top-bar-section">
-        <ul>
-          <li class="active"><a href="#"><i class="fi-home"></i> Home</a></li>
-          <!--<li class="has-dropdown"><a href="#">Accommodations</a>
-            <ul class="dropdown">
-              <li><a href="#">King with Sofa Bed</a></li>
-              <li><a href="#">Two Queen Beds</a></li>
-              <li><a href="#">Pet-Friendly Suite</a></li>
-            </ul>
-          </li>-->
-          <li><a href="#"><i class="fi-torso"></i> Login</a></li>
-          <li><a href="#"><i class="fi-magnifying-glass"></i> Search</a></li>
-        </ul>
-      </section>
-    </nav>
-    <header class="row topspace">
-      <div class="large-6 medium-6 columns small-only-text-center logo">
-        <img src="http://placekitten.com/194/85" alt="Prod Connect">
-      </div>
-      <div class="large-6 medium-6 columns small-only-text-center medium-text-right large-text-right">
-        <h2>Make media now</h2>
-      </div>
-    </header>
-    <div class="banner row">
-      <div class="row">
-        <ul class="large-block-grid-3 medium-block-grid-3 small-block-grid-1"  data-equalizer>
-          <li class="text-center banner-category banner-fl" data-equalizer-watch>
-            <h3 class="banner-header">Freelancers</h3>
-            <p>Thing 1</p>
-            <p>Thing 2</p>
-            <p>Thing 3</p>
-          </li>
-          <li class="text-center banner-category banner-cl" data-equalizer-watch>
-            <h3 class="banner-header">Clients</h3>
-            <p>Thing 1</p>
-            <p>Thing 2</p>
-            <p>Thing 3</p>
-          </li>
-          <li class="text-center banner-category banner-pc" data-equalizer-watch>
-            <h3 class="banner-header">Production Companies</h3>
-            <p>Thing 1</p>
-            <p>Thing 2</p>
-            <p>Thing 3</p>
-          </li>
-        </ul>
-      </div>
-      <div class="row">
-        <div class="small-12 column text-center">
-          <div class="button radius">How it works</div>
-        </div>
-      </div>
-    </div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Profile</title>
+        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="css/fontawesome-stars.css" />
 
-    <footer class="row">
-      <div class="large-12 columns text-center">
-        <p>Prod Connect, Thunder Bay, Canada</p> 
-        <p>Phone 807 708 1234 • info@prodconnect.com • www.prodconnect.com</p>
-      </div>
-    </footer>
-    
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
-    <script>
-      $(document).foundation();
-    </script>
-  </body>
+        <script src="js/vendor/modernizr.js"></script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation/foundation.js"></script>
+        <script src="js/foundation/foundation.equalizer.js"></script>
+
+        <link rel="stylesheet" href="css/app.css" />
+        <!-- Icons -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+        <script>
+            $(document).ready(function() {
+                $(document).foundation();
+            });
+        </script>
+    </head>
+    <body>
+        <div id='banner' class='row'>
+            <div id="profile-div" class="column small-12 text-center">
+                <img id='profile-pic' src="img/portrait_placeholder.png">
+            </div>
+        </div> 
+        <div id='profile' class='row' data-equalizer>
+            <div id='left-panel' class='large-3 columns' data-equalizer-watch>
+                <section id="reviews">
+                    <h3 class="text-center">Reviews</h3>
+                    <div class="overall-rating text-center">
+
+                        <h4>Overall Rating</h4>
+
+                        <div class="br-wrapper br-theme-fontawesome-stars">
+                            
+                            <div class="br-widget">
+                                <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected br-current"></a>
+                                <a href="#" data-rating-value="4" data-rating-text="4" class=""></a>
+                                <a href="#" data-rating-value="5" data-rating-text="5" class=""></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="review">
+                        <div class="reviewer">
+                            <img class="review-portrait" src="img/portrait_placeholder.png">
+                            Joe Blow
+                        </div>
+                        <div class="review-rating">
+                        </div>
+                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                <div class="br-widget">
+                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                    <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                    <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
+                                    <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
+                                    <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected br-current"></a>
+                                </div>
+                            </div>
+                        <div class="review-body">
+                            I though that Tom was excellent at what he did ...
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="reviewer">
+                            <img class="review-portrait" src="img/portrait_placeholder.png">
+                            Dan Hardy
+                        </div>
+                        <div class="review-rating">
+                        </div>
+                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                <div class="br-widget">
+                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected br-current"></a>
+                                    <a href="#" data-rating-value="2" data-rating-text="2" class=""></a>
+                                    <a href="#" data-rating-value="3" data-rating-text="3" class=""></a>
+                                    <a href="#" data-rating-value="4" data-rating-text="4" class=""></a>
+                                    <a href="#" data-rating-value="5" data-rating-text="5" class=""></a>
+                                </div>
+                            </div>
+                        <div class="review-body">
+                            I though that Tom was garbage and all his work ...
+                        </div>
+                    </div>
+                </section>
+                <section id="pricing" class="pricing">
+                    <h3 class="text-center">Pricing</h3>
+                    <div id='day-rate'>
+                        $ 1000/day
+                    </div>
+                    <hr>
+                    <div id='past-projects'>
+                        5 projects completed
+                    </div>
+                </section>
+            </div> <!-- end left-panel -->
+            <article id='center-panel' class='large-6 columns' data-equalizer-watch>
+                <nav id="profile-nav" class="text-center">
+                    <h3 class="text-center">Panoramic Media</h3>
+                    <button id="description" class="button small radius secondary">Description</button>
+                    <button id="equipment" class="button small radius secondary">Equipment</button>
+                    <button id="team" class="button small radius secondary">Team</button>
+                </nav>
+                <section id="main">
+                    <p>Here at panoramic media we really like panoramas</p>
+                    <p>sdfsdfsdsf</p>
+                </section>
+            </article> <!-- end center panel -->
+            <section id='right-panel' class='large-3 columns text-center' data-equalizer-watch>
+                <h3>Availability</h3>
+                <div id="availability">
+                    <img src="img/datepicker_grayed.png"></img>
+                </div>
+            </section> <!-- end right panel -->
+        </div>
+    </body>
 </html>
