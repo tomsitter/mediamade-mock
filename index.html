@@ -15,10 +15,30 @@
         <link rel="stylesheet" href="css/app.css" />
         <!-- Icons -->
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
         <script>
             $(document).ready(function() {
                 $(document).foundation();
+
+                $("#btn-description").click(function() {
+                    $("#description").show();
+                    $("#equipment").hide();
+                    $("#team").hide();
+                    console.log("description clicked")
+                })
+                $("#btn-equipment").click(function() {
+                    $("#description").hide();
+                    $("#equipment").show();
+                    $("#team").hide();
+                    console.log("equipment clicked")
+                })
+                $("#btn-team").click(function() {
+                    $("#description").hide();
+                    $("#equipment").hide();
+                    $("#team").show();
+                    console.log("team clicked")
+                })
             });
         </script>
     </head>
@@ -28,18 +48,33 @@
                 <img id='profile-pic' src="img/portrait_placeholder.png">
             </div>
         </div> 
-        <div id='profile' class='row' data-equalizer data-equalizer-mq="large-up">
+        <div id='profile' class='row small-text-center' data-equalizer data-equalizer-mq="large-up">
             <article id='center-panel' class='large-6 columns large-push-3' data-equalizer-watch>
                 <nav id="profile-nav" class="text-center">
                     <h3 class="text-center">Panoramic Media</h3>
-                    <button id="description" class="button small radius secondary">Description</button>
-                    <button id="equipment" class="button small radius secondary">Equipment</button>
-                    <button id="team" class="button small radius secondary">Team</button>
+                    <button id="btn-description" class="button small radius secondary">Description</button>
+                    <button id="btn-equipment" class="button small radius secondary">Equipment</button>
+                    <button id="btn-team" class="button small radius secondary">Team</button>
                 </nav>
-                <section id="main">
+                <section id="description">
+                    <h3>Description</h3>
                     <p>Here at panoramic media we really like panoramas</p>
                     <p>sdfsdfsdsf</p>
                 </section>
+                <section id="equipment" style="display: none;">
+                    <h3>Equipment</h3>
+                    <h5>Cameras</h5>
+                    <ul class="no-bullet">
+                        <li>Red 4K</li>
+                        <li>HDR thing</li>
+                    </ul>
+                </section>
+                <section id="team" style="display: none;">
+                    <h3>Team</h3>
+                    <p>Here at panoramic media we really like panoramas</p>
+                    <p>We want to take panoramas of all your shit</p>
+                </section>
+                <hr class="hide-for-large-up">
             </article> <!-- end center panel -->
             <div id='left-panel' class='large-3 columns large-pull-6' data-equalizer-watch>
                 <section id="reviews">
@@ -100,17 +135,18 @@
                             I though that Tom was garbage and all his work ...
                         </div>
                     </div>
+                    <hr class="hide-for-large-up">
                 </section>
                 <section id="pricing" class="pricing">
                     <h3 class="text-center">Pricing</h3>
                     <div id='day-rate'>
                         $ 1000/day
                     </div>
-                    <hr>
                     <div id='past-projects'>
                         5 projects completed
                     </div>
                 </section>
+                <hr class="hide-for-large-up">
             </div> <!-- end left-panel -->
             <section id='right-panel' class='large-3 columns text-center' data-equalizer-watch>
                 <h3>Availability</h3>
@@ -119,5 +155,17 @@
                 </div>
             </section> <!-- end right panel -->
         </div>
+        <footer class="footer">
+            <div class="row full-width small-text-center">
+                <div class="column large-8">
+                    <p>© 2015 Prod-Connect. All rights reserved.</p>
+                </div>
+                <div class="column large-4 text-right">
+                    <a href="http://www.twitter.com" class="fa fa-twitter fa-3x social"></a>
+                    <a href="http://www.facebook.com" class="fa fa-facebook fa-3x social"></a>
+                    <a href="http://www.tomsitter.ca" class="fa fa-envelope fa-3x social"></a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
