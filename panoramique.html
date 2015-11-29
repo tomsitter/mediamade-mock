@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Panoramique Automotive</title>
+        <link rel="stylesheet" href="css/foundation.css" />
+        <link rel="stylesheet" href="css/fontawesome-stars.css" />
+
+        <script src="js/vendor/modernizr.js"></script>
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/foundation/foundation.js"></script>
+        <script src="js/foundation/foundation.equalizer.js"></script>
+
+        <link rel="stylesheet" href="css/app.css" />
+        <!-- Icons -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+        <script>
+            $(document).ready(function() {
+                $(document).foundation();
+
+                $("#btn-description").click(function() {
+                    $("#description").show();
+                    $("#equipment").hide();
+                    $("#team").hide();
+                    console.log("description clicked")
+                    $(document).foundation();
+                })
+                $("#btn-equipment").click(function() {
+                    $("#description").hide();
+                    $("#equipment").show();
+                    $("#team").hide();
+                    console.log("equipment clicked")
+                    $(document).foundation();
+                })
+                $("#btn-team").click(function() {
+                    $("#description").hide();
+                    $("#equipment").hide();
+                    $("#team").show();
+                    console.log("team clicked")
+                    $(document).foundation();
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div id='banner' class='row production'>
+            <div id="profile-div" class="column small-12 text-center">
+                <img id='profile-pic' class="th" src="img/example-logo-bg.png">
+            </div>
+        </div> 
+        <div id='profile' class='row small-text-center' data-equalizer data-equalizer-mq="medium-up">
+            <article id='center-panel' class='medium-6 columns medium-push-3' data-equalizer-watch>
+                <nav id="profile-nav" class="text-center">
+                    <h3 class="text-center">Panoramique Automotive</h3>
+                    <button id="btn-description" class="button small radius secondary">Description</button>
+                    <button id="btn-equipment" class="button small radius secondary">Equipment</button>
+                    <button id="btn-team" class="button small radius secondary">Team</button>
+                </nav>
+                <section id="description" class="text-left">
+                    <h3 class="text-center">Description</h3>
+                    <p>Panoramique Automotive creates content for dealerships. We specialize in digital, television, 
+                    and audio content that target your customer while complimenting the medium of consumption.</p>
+
+                    <p>Panoramique's enthusiastic team of creative professionals conceptualizes, 
+                    develops and produces captivating content to fit the specific requirement of every individual campaign.</p>
+
+                </section>
+                <section id="equipment" style="display: none;">
+                    <h3>Equipment</h3>
+                    <h5>Cameras</h5>
+                    <ul class="no-bullet">
+                        <li>Red 4K</li>
+                        <li>HDR thing</li>
+                    </ul>
+                </section>
+                <section id="team" class="text-left" style="display: none;">
+                    <h3 class="text-center">Team</h3>
+                    <h5>Chris Brown - Visual Director / Senior Editor</h5>
+                    <p><img class="team-portrait" src="img/team-portrait-1.jpg">Graduating with honours from the well established Confederation College Film Production Program, Chris has since gone on to establish a name for himself within the South Western Ontario media scene.  Past credits include: projects for MTV and CTV, work with the major Canadian YouTube channel "WatchMojo”, Adam Sandler’s “PIXELS” (2015), “ROBOCOP” (2014) and numerous Lifetime and Hallmark Television Movies.</p>
+
+                    <p>For the past year Chris has taken on the role of Internet and Used Car Manager at an Ontario dealership where his love of business, passion for media, and understanding of inbound marketing went hand and hand producing an online dealership presence in Canada which is expanding vastly compared to that of the manufacturer.</p>
+
+                    <h5>Spencer Badanai - Producer/Director</h5>
+
+                    <p><img class="team-portrait" src="img/team-portrait-2.jpg">Upon graduating Confederation College's film production program, Spencer went on to receive a spot on the deans list honour roll at Fanshawe's Advanced Film Production Program. He excelled in the Program’s hands-on approach and thrived in the logistic, budgeting, creative, and marketing roles within media production.</p>
+
+                    <p>Spencer took on the position of production manager at the award winning and innovative media production company Two Story Productions while working closely with the established ad agency, Hogan Millar Media. Spencer was involved with projects from the initial stages of researching and creative development, through to the actual production and post-production processes. It was here that Spencer was able to utilize his wide set of skills and grow as a creative thinker, account handler, and media producer.</p>
+
+                </section>
+                <hr class="hide-for-medium-up">
+            </article> <!-- end center panel -->
+            <div id='left-panel' class='medium-3 columns medium-pull-6' data-equalizer-watch>
+                <section id="reviews">
+                    <h3 class="text-center">Reviews</h3>
+                    <div class="overall-rating text-center">
+
+                        <h4>Overall Rating</h4>
+
+                        <div class="br-wrapper br-theme-fontawesome-stars">
+                            
+                            <div class="br-widget">
+                                <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
+                                <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
+                                <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected"></a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="review">
+                        <div class="reviewer">
+                            <img class="review-portrait" src="img/reviewer2.png">
+                            Sarah Jones
+                        </div>
+                        <div class="review-rating">
+                        </div>
+                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                <div class="br-widget">
+                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                    <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                    <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
+                                    <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
+                                    <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected br-current"></a>
+                                </div>
+                            </div>
+                        <div class="review-body">
+                            I though that Tom was excellent at what he did ...
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="reviewer">
+                            <img class="review-portrait" src="img/reviewer1.jpg">
+                            Dan Hardy
+                        </div>
+                        <div class="review-rating">
+                        </div>
+                            <div class="br-wrapper br-theme-fontawesome-stars">
+                                <div class="br-widget">
+                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                    <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                    <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
+                                    <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected br-current"></a>
+                                    <a href="#" data-rating-value="5" data-rating-text="5" class=""></a>
+                                </div>
+                            </div>
+                        <div class="review-body">
+                            I though that Tom was garbage and all his work ...
+                        </div>
+                    </div>
+                    <hr class="hide-for-medium-up">
+                </section>
+                <section id="pricing" class="panel-section">
+                    <h3 class="text-center">Pricing</h3>
+                    <div id='day-rate'>
+                        $ 1000/day
+                    </div>
+                    <div id='past-projects'>
+                        5 projects completed
+                    </div>
+                </section>
+                <hr class="hide-for-medium-up">
+            </div> <!-- end left-panel -->
+            <section id='right-panel' class='medium-3 columns text-center' data-equalizer-watch>
+                <h3>Availability</h3>
+                <div id="availability">
+                    <img src="img/datepicker_grayed.png"></img>
+                </div>
+            </section> <!-- end right panel -->
+        </div>
+        <footer class="footer">
+            <div class="row full-width small-text-center">
+                <div class="column medium-8 medium-text-left">
+                    <p>© 2015 Prod-Connect. All rights reserved.</p>
+                </div>
+                <div class="column medium-4 text-right small-text-center">
+                    <a href="http://www.twitter.com" class="fa fa-twitter fa-3x social"></a>
+                    <a href="http://www.facebook.com" class="fa fa-facebook fa-3x social"></a>
+                    <a href="http://www.tomsitter.ca" class="fa fa-envelope fa-3x social"></a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

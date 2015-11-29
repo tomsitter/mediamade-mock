@@ -7,7 +7,16 @@ body {
 
 #banner {
 	height:315px;
-	background: url("http://placehold.it/1000x315") no-repeat center;
+	width:1000px;
+}
+
+.jones {
+	background: url("../img/familyhonda-a1.jpg") no-repeat center;
+}
+
+.production {
+	background: url("../img/ferrari3.jpg") no-repeat center;
+	background-size: 1000px;
 }
 
 footer {
@@ -40,12 +49,13 @@ footer p {
 	max-width: 40px;
 }
 
-.pricing {
+.panel-section {
 	padding-top: 1em;
+	padding-bottom:1em;
 }
 
 #profile {
-	height: 100%;
+	/*height: 100%;*/
 }
 
 #left-panel {
@@ -72,6 +82,16 @@ footer p {
 	transform: translateX(-50%);
 }
 
+.team-portrait {
+	max-width: 100px;
+	float:left;
+	margin-right: 1em;
+}
+
 .social {
 	color: #999;
+}
+
+.verified {
+	color: #10DB40;
 }
