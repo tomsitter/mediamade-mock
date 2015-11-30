@@ -95,3 +95,83 @@ footer p {
 .verified {
 	color: #10DB40;
 }
+
+
+.description {
+	padding-top: 0.5em;
+}
+
+.writeup {
+	height: 9em;
+}
+
+#results-panel {
+	visibility: hidden;
+}
+
+#search-options {
+	height: 15em;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+	margin-bottom: 1em !important;
+	background-color: #fff;
+	display: none;
+}
+
+.search-result {
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+	background-color: #fff;
+	height: 250px;
+	margin-bottom: 1em !important;
+}
+
+.result-portrait {
+	max-width: 200px;
+	max-height: 200px;
+	margin: auto;
+	margin-top: 0.5em;
+}
+
+/* make font-awesome icons inline in foundation inline-list */
+.fa-inline {
+	display:inline !important;
+	color: #10DB40;
+	padding-left: 2em;
+}
+
+/* Not available */
+.fa-na {
+	color: #999;
+}
+
+.search-rating {
+	padding-top: 0.5em;
+}
+
+/*#search-box {
+	position:absolute;
+	margin-bottom: 0px;
+	bottom: 1em;
+}*/
+
+/*#search-button {
+	position:absolute;
+	margin-bottom: 0px;
+	bottom: 1em;
+	height: 40px;
+}*/
+
+#search-button {
+	margin-bottom: 1em;
+	margin-top: 1em;
+	height:40px;
+}
+
+#search-advanced {
+	position:absolute;
+	bottom: 1em;
+}
+
+#search-bar {
+	position: relative;
+}
+
