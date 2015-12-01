@@ -28,6 +28,11 @@
             $("#search-advanced").click(function() {
                 $("#search-options").toggle()
             })
+
+            $(".service").click(function() {
+                $(this).find("i").toggleClass("checked")
+            })
+
         });
     </script>
 </head>
@@ -61,7 +66,14 @@
     </div>
 
     <div id="search-options" class="row">
-        Hi there
+        <ul class="inline-list">
+            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Video</a></li>
+            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Audio</a></li>
+            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Photography</a></li>
+            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Special Effects</a></li>
+            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Physical Effects</a></li>
+            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Aerial</a></li>
+        </ul>
     </div>
 
     <div id="search-results" class="row">

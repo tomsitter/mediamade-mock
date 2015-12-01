@@ -134,8 +134,12 @@ footer p {
 /* make font-awesome icons inline in foundation inline-list */
 .fa-inline {
 	display:inline !important;
-	color: #10DB40;
 	padding-left: 2em;
+	color: #999
+}
+
+.checked {
+	color: #10DB40;
 }
 
 
