@@ -5,9 +5,36 @@ body {
 }
 
 
+footer {
+	padding: 2em 0;
+	color: #999;
+}
+footer p {
+	font-size: 1em;
+}
+
+.top-bar {
+	background: #000;
+}
+
+
 #banner {
 	height:315px;
 	width:1000px;
+}
+
+#logo {
+	margin-top: 2em;
+	padding-top: 3em;
+	background: #fff;
+}
+
+#main-nav {
+	background: #fff;
+}
+
+#main-content {
+	height: 100%;
 }
 
 .jones {
@@ -18,15 +45,6 @@ body {
 	background: url("../img/ferrari3.jpg") no-repeat center;
 	background-size: 1000px;
 }
-
-footer {
-	padding: 2em 0;
-	color: #999;
-}
-footer p {
-	font-size: 1em;
-}
-
 .review {
 	padding: 0.5em;
 	background-color: rgba(100, 100, 100, 0.1);
