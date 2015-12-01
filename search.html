@@ -26,11 +26,29 @@
             })
 
             $("#search-advanced").click(function() {
-                $("#search-options").toggle()
+                $("#advanced-search").toggle()
             })
 
+            $("#audio-alert").hide()
+
             $(".service").click(function() {
-                $(this).find("i").toggleClass("checked")
+                service = $(this).find("i")
+                service.toggleClass("checked")
+                if (service.hasClass('video') & service.hasClass("checked")) {
+                    audio = $(".service i.audio")
+                    if (!audio.hasClass("checked")) {
+                        audio.addClass("checked")
+                        $("#audio-alert").show()
+                    }
+                }
+
+                if (service.hasClass('audio') & !service.hasClass('checked')) {
+                    $("#audio-alert").hide()
+                }
+            })
+
+            $("#audio-alert").click(function() {
+                $(this).hide();
             })
 
         });
@@ -49,7 +67,7 @@
         </ul>
       </section>
     </nav>
-    <div id="search-bar" class="row" data-equalizer>
+    <div id="search-bar" class="row top-padded" data-equalizer>
         <div class="medium-8 columns" data-equalizer-watch>
             <div class="row collapse">
                 <div class="small-9 columns">
@@ -65,23 +83,60 @@
         </div>
     </div>
 
-    <div id="search-options" class="row">
-        <ul class="inline-list">
-            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Video</a></li>
-            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Audio</a></li>
-            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Photography</a></li>
-            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Special Effects</a></li>
-            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Physical Effects</a></li>
-            <li><a href="#" class="service"><i class="fa fa-check fa-inline unchecked"></i>Aerial</a></li>
-        </ul>
-    </div>
+    <section class="row" id="advanced-search">
+        <div class="small-12 columns">
+            <div id="services" class="row top-padded">
+                <div class="small-12 columns">
+                    <ul class="service-list"> 
+                        <li class="service-item"><a href="#" class="service"><i class="fa fa-check fa-inline video"></i>Video</a></li>
+                        <li class="service-item"><a href="#" class="service"><i class="fa fa-check fa-inline audio"></i>Audio</a></li>
+                        <li class="service-item"><a href="#" class="service"><i class="fa fa-check fa-inline photo"></i>Photography</a></li>
+                        <li class="service-item"><a href="#" class="service"><i class="fa fa-check fa-inline sfx"></i>Special Effects</a></li>
+                        <li class="service-item"><a href="#" class="service"><i class="fa fa-check fa-inline pfx"></i>Physical Effects</a></li>
+                        <li class="service-item"><a href="#" class="service"><i class="fa fa-check fa-inline aerial"></i>Aerial</a></li>
+                    </ul>
+                    <div id="audio-alert" data-alert class="alert-box info radius">
+                        Audio is required to record interviews and voiceovers.
+                        <a href="#" class="close">&times;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="max-budget" class="row">
+                <div class="medium-3 columns">
+                  <label for="right-label" class="right small-only-text-left inline">Maximum Budget</label>
+                </div>
+                <div class="medium-3 medium-pull-6 columns">
+                  <input type="text" id="right-label" class="left inline" placeholder="$">
+                </div>
+            </div>
+
+            <div id="keyword-search" class="row">
+                <div class="medium-3 columns">
+                  <label for="right-label" class="right small-only-text-left inline">Keywords</label>
+                </div>
+                <div class="medium-9 columns">
+                  <input type="text" id="right-label" placeholder="seperate, keywords, by, commas">
+                </div>
+            </div>
+
+            <div id="name-search" class="row">
+                <div class="medium-3 columns">
+                  <label for="right-label" class="right small-only-text-left inline">Prouction Company</label>
+                </div>
+                <div class="medium-9 columns">
+                  <input type="text" id="right-label" placeholder="Lorem Ipsum Media">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <div id="search-results" class="row">
         <div id="results-panel" class="small-12 columns">
             <div class="search-result row">
                 <div class="small-12 columns">
                     <div class="row">
-                        <div class="portrait small-3 columns">
+                        <div class="portrait medium-3 columns">
                             <img class="result-portrait th" src="img/badsitter_logo.png">
                              <div class="br-wrapper br-theme-fontawesome-stars search-rating">
                                 <div class="br-widget text-center">
@@ -93,7 +148,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="description small-9 columns">
+                        <div class="description medium-9 columns">
                             <div class="writeup">
                                 <strong>Bad Sitter Media     |      Thunder Bay, ON</strong>
                                 <p>Bad Sitter Media creates content for dealerships. We specialize in digital, television, and audio content that target your customer while complimenting the medium of consumption. Bad Sitter's enthusiastic team of creative professionals conceptualizes, develops and produces captivating content to fit the specific requirement of every individual campaign</p>
@@ -103,10 +158,10 @@
                                 <li>Approximately 2 minutes finished product</li>
                             </ul>
                             <ul class="inline-list">
-                                <li><i class="fa fa-check fa-inline"></i> Video</li>
-                                <li><i class="fa fa-check fa-inline"></i> Audio</li>
-                                <li><i class="fa fa-check fa-inline "></i> Photography</li>
-                                <li><i class="fa fa-check fa-inline"></i> Aerial</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Video</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Audio</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Photography</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Aerial</li>
                             </ul>
                         </div>
                     </div>
@@ -138,9 +193,9 @@
                                 <li>Approximately 30 seconds finished product</li>
                             </ul>
                             <ul class="inline-list">
-                                <li><i class="fa fa-check fa-inline"></i> Video</li>
-                                <li><i class="fa fa-check fa-inline"></i> Audio</li>
-                                <li><i class="fa fa-times fa-inline"></i> Photography</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Video</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Audio</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Photography</li>
                             </ul>
                         </div>
                     </div>
@@ -172,10 +227,10 @@
                                 <li>Approximately 1 minute finished product</li>
                             </ul>
                             <ul class="inline-list">
-                                <li><i class="fa fa-check fa-inline"></i> Video</li>
-                                <li><i class="fa fa-check fa-inline"></i> Audio</li>
-                                <li><i class="fa fa-check fa-inline"></i> Special Effects</li>
-                                <li><i class="fa fa-check fa-inline"></i> Practical Effects</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Video</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Audio</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Special Effects</li>
+                                <li><i class="fa fa-check fa-inline checked"></i> Practical Effects</li>
                             </ul>
                         </div>
                     </div>

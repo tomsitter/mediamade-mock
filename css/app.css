@@ -109,19 +109,26 @@ footer p {
 	visibility: hidden;
 }
 
-#search-options {
-	height: 15em;
+#advanced-search {
+	display: none;
 	box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
 	margin-bottom: 1em !important;
 	background-color: #fff;
-	display: none;
 }
 
 .search-result {
 	box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
-	background-color: #fff;
-	height: 250px;
 	margin-bottom: 1em !important;
+	background-color: #fff;
+}
+
+.service-list {
+	list-style-type: : none;
+	text-align: center;
+}
+
+.service-item {
+	display: inline-block;
 }
 
 .result-portrait {
@@ -166,13 +173,17 @@ footer p {
 	height:40px;
 }*/
 
-#search-advanced {
-	position:absolute;
-	bottom: 1em;
-}
+/*@media screen and (min-width: 480px) {
+	#search-advanced {
+		position:absolute;
+		bottom: 1em;
+	}
+}*/
 
-#search-bar {
+.top-padded {
 	padding-top: 1em;
-	position: relative;
 }
 
+#search-advanced {
+	line-height: 57px;
+}
