@@ -177,6 +177,10 @@ footer p {
 #searching {
 	display: none;
 }
+
+#sortby {
+	display: none;
+}
 /*#search-box {
 	position:absolute;
 	margin-bottom: 0px;
