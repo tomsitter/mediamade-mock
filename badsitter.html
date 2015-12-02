@@ -25,21 +25,28 @@
                     $("#description").show();
                     $("#equipment").hide();
                     $("#team").hide();
-                    console.log("description clicked")
+                    $("#portfolio").hide();
                     $(document).foundation();
                 })
                 $("#btn-equipment").click(function() {
                     $("#description").hide();
                     $("#equipment").show();
                     $("#team").hide();
-                    console.log("equipment clicked")
+                    $("#portfolio").hide();
                     $(document).foundation();
                 })
                 $("#btn-team").click(function() {
                     $("#description").hide();
                     $("#equipment").hide();
                     $("#team").show();
-                    console.log("team clicked")
+                    $("#portfolio").hide();
+                    $(document).foundation();
+                })
+                $("#btn-portfolio").click(function() {
+                    $("#description").hide();
+                    $("#equipment").hide();
+                    $("#team").hide();
+                    $("#portfolio").show();
                     $(document).foundation();
                 })
             });
@@ -71,6 +78,7 @@
                     <button id="btn-description" class="button small radius secondary">Description</button>
                     <button id="btn-equipment" class="button small radius secondary">Equipment</button>
                     <button id="btn-team" class="button small radius secondary">Team</button>
+                    <button id="btn-portfolio" class="button small radius secondary">Portfolio</button>
                 </nav>
                 <section id="description" class="text-left">
                     <h3 class="text-center">Description</h3>
@@ -83,25 +91,50 @@
                 </section>
                 <section id="equipment" style="display: none;">
                     <h3>Equipment</h3>
-                    <h5>Cameras</h5>
-                    <ul class="no-bullet">
-                        <li>Red 4K</li>
-                        <li>HDR thing</li>
+                    <ul class="no-bullet text-left">
+                        <strong><li class="list-header">Camera</li></strong>
+                            <li>Sony A7s 4K Camera</li>
+                        <strong><li class="list-header">Lenses</li></strong>
+                            <li>L-mount lens adapter</li>
+                            <li>Full set of Canon Cinema Lenses Including 35mm, 10mm, 80mm</li>
+                        <strong><li class="list-header">Camera stabilization</li></strong>
+                            <li>Tripod</li>
+                            <li>Slider</li>
+                            <li>DJI Ronin gimbal</li>
+                        <strong><li class="list-header">Audio</li></strong>
+                            <li>H6N Professional audio recorder/mixer</li>
+                            <li>Rhode NTG3 shotgun broadcast quality microphone</li>
+                            <li>Rhode Carbon Fiber boom poll</li>
+                        <strong><li class="list-header">Lights</li></strong>
+                            <li>Wide range of LED and tungsten lights for both small and large setups</li>
+                        <strong><li class="list-header">Editing Software</li></strong>
+                            <li>Adobe Premier CS6</li>
+                            <li>Motion special effects software</li>
                     </ul>
                 </section>
                 <section id="team" class="text-left" style="display: none;">
                     <h3 class="text-center">Team</h3>
-                    <h5>Chris Brown - Visual Director / Senior Editor</h5>
+                    <h5>Greg Smith - Visual Director / Senior Editor</h5>
                     <p><img class="team-portrait" src="img/team-portrait-1.jpg">Graduating with honours from the well established Confederation College Film Production Program, Chris has since gone on to establish a name for himself within the South Western Ontario media scene.  Past credits include: projects for MTV and CTV, work with the major Canadian YouTube channel "WatchMojo”, Adam Sandler’s “PIXELS” (2015), “ROBOCOP” (2014) and numerous Lifetime and Hallmark Television Movies.</p>
 
                     <p>For the past year Chris has taken on the role of Internet and Used Car Manager at an Ontario dealership where his love of business, passion for media, and understanding of inbound marketing went hand and hand producing an online dealership presence in Canada which is expanding vastly compared to that of the manufacturer.</p>
 
-                    <h5>Spencer Badanai - Producer/Director</h5>
+                    <h5>Kyle Rozic - Producer/Director</h5>
 
-                    <p><img class="team-portrait" src="img/team-portrait-2.jpg">Upon graduating Confederation College's film production program, Spencer went on to receive a spot on the deans list honour roll at Fanshawe's Advanced Film Production Program. He excelled in the Program’s hands-on approach and thrived in the logistic, budgeting, creative, and marketing roles within media production.</p>
+                    <p><img class="team-portrait" src="img/team-portrait-2.jpg">Upon graduating Confederation College's film production program, Kyle went on to receive a spot on the deans list honour roll at Fanshawe's Advanced Film Production Program. He excelled in the Program’s hands-on approach and thrived in the logistic, budgeting, creative, and marketing roles within media production.</p>
 
-                    <p>Spencer took on the position of production manager at the award winning and innovative media production company Two Story Productions while working closely with the established ad agency, Hogan Millar Media. Spencer was involved with projects from the initial stages of researching and creative development, through to the actual production and post-production processes. It was here that Spencer was able to utilize his wide set of skills and grow as a creative thinker, account handler, and media producer.</p>
+                    <p>Kyle took on the position of production manager at the award winning and innovative media production company Two Story Productions while working closely with the established ad agency, Hogan Millar Media. Kyle was involved with projects from the initial stages of researching and creative development, through to the actual production and post-production processes. It was here that Kyle was able to utilize his wide set of skills and grow as a creative thinker, account handler, and media producer.</p>
 
+                </section>
+                <section id="portfolio" class="text-left" style="display: none;">
+                    <h3 class="text-center">Portfolio</h3>
+
+                    <h4>Rick Astley - Never Gonna Give You Up</h4>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                    
+                    <h4>Rick Astley - Together Forever</h4>
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/yPYZpwSpKmA" frameborder="0" allowfullscreen></iframe>
+                    
                 </section>
                 <hr class="hide-for-medium-up">
             </article> <!-- end center panel -->
@@ -137,7 +170,7 @@
                                     <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
                                     <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
                                     <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
-                                    <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected br-current"></a>
+                                    <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected"></a>
                                 </div>
                             </div>
                         <div class="review-body">
@@ -156,7 +189,7 @@
                                     <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
                                     <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
                                     <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
-                                    <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected br-current"></a>
+                                    <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
                                     <a href="#" data-rating-value="5" data-rating-text="5" class=""></a>
                                 </div>
                             </div>
