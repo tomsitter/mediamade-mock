@@ -211,3 +211,8 @@ footer p {
 #search-advanced {
 	line-height: 57px;
 }
+
+#from, #to {
+	position: relative; 
+	z-index: 100000;
+}
