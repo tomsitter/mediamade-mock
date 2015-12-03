@@ -157,7 +157,8 @@ footer p {
 
 /* make font-awesome icons inline in foundation inline-list */
 .fa-inline {
-	color: #999
+	color: #999;
+	display: inline !important;
 }
 
 .checked {
