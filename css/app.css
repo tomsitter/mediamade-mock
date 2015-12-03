@@ -200,12 +200,11 @@ footer p {
 	height:40px;
 }*/
 
-/*@media screen and (min-width: 480px) {
-	#search-advanced {
-		position:absolute;
-		bottom: 1em;
+@media screen and (min-width: 480px) {
+	#name-search-label {
+		padding-top: 0em;
 	}
-}*/
+}
 
 .top-padded {
 	padding-top: 1em;
