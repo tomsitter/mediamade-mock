@@ -1,59 +1,87 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Media Maid</title>
+    <title>Media Made</title>
     <link rel="stylesheet" href="css/foundation.css" />
-    <link rel="stylesheet" href="css/fontawesome-stars.css" />
-
-    <script src="js/vendor/modernizr.js"></script>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/foundation/foundation.js"></script>
-    <script src="js/foundation/foundation.equalizer.js"></script>
-
-    <link rel="stylesheet" href="css/app.css" />
-    <!-- Icons -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-    <script>
-        $(document).ready(function() {
-            $(document).foundation();
-        });
-    </script>
-
+    <link rel="stylesheet" href="css/topbar.css" />
+    <link rel="stylesheet" href="css/home.css">
 </head>
-
 <body>
-    <div id="main-content">
-        <article id="logo" class="row">
-            <div class="small-12 columns text-center">
-                <h1>MediaMade</h1>
-                <h5>Media made for the price you want</h5>
-            </div>
-        </article>
-        <nav id="main-nav" class="row">
-            <div class="small-6 text-right columns">
-                <a href="jones.html" class="button radius">log in</a>
-            </div>
-            <div class="small-6 text-left columns">
-                <a href="search.html" class="button radius">search</a>
-            </div>
-        </nav>
+
+    <!-- Navigation -->
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+          <li class="name">
+            <a href="#"><img id="tbIMG" src="img/Mm-logo-b.png"/></a>
+          </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li><a href="#">Right Button Active</a></li>
+          <li>
+            <a href="#">Right Button</a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="banner HomeBanner">
+      <div class="row">
+        <div class="medium-4 medium-uncentered small-10 small-centered columns">
+            <h2>A Better Way to Hire Media</h2>
+            <p>Media made is an awesome company that does these important things to help you connect with great media companies and create awesome content for your clients.</p>
+        </div>
+        <div class="medium-6 medium-offset-2 medium-uncentered small-12 small-centered columns">
+          <div class="flex">
+            <iframe  src="https://www.youtube.com/embed/8tPnX7OPo0Q" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
-    <footer class="footer">
-        <div class="row full-width small-text-center">
-            <div class="columns medium-8 small-12 text-left">
-                <p>© 2015 MediaMade. All rights reserved.</p>
-            </div>
-            <div class="columns medium-4 small-12 text-right small-only-text-center">
-                <a href="http://www.twitter.com" class="fa fa-twitter fa-lg social"></a>
-                <a href="http://www.facebook.com" class="fa fa-facebook fa-lg social"></a>
-                <a href="http://www.tomsitter.ca" class="fa fa-envelope fa-lg social"></a>
-            </div>
-        </div>
-    </footer>
-</body>
+    <div class="row HomeCenter">
+     <div class=" medium-12 medium-uncentered small-10 small-centered columns">
+       <h2>Some of the things we provide:</h2>
+        <ul class="small-block-grid-1 large-block-grid-4">
+          <li><a href="#" class=""><img src="img/400x300.png" alt="Farmer's market. "></a>
+          <h4>Stuff</h4>
+          <p>Praesent aliquam quam sodales ligula porttitor vehicula. Ut nisl orci, blandit id sollicitudin at, laoreet a magna. In vitae finibus eros, a bibendum</p></li>
+          <li><a href="#" class=""><img src="img/400x300.png" alt="Hot rock massage. "></a>
+          <h4>About</h4>
+          <p>Praesent aliquam quam sodales ligula porttitor vehicula. Ut nisl orci, blandit id sollicitudin at, laoreet a magna. In vitae finibus eros, a bibendum</p></li>
+          <li><a href="#" class=""><img src="img/400x300.png" alt="Biking in San Francisco. "></a>
+          <h4>Media</h4>
+          <p>Praesent aliquam quam sodales ligula porttitor vehicula. Ut nisl orci, blandit id sollicitudin at, laoreet a magna. In vitae finibus eros, a bibendum</p></li>
+          <li><a href="#" class=""><img src="img/400x300.png" alt="Biking in San Francisco. "></a>
+          <h4>Made</h4>
+          <p>Praesent aliquam quam sodales ligula porttitor vehicula. Ut nisl orci, blandit id sollicitudin at, laoreet a magna. In vitae finibus eros, a bibendum</p></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="media-test">
+      <h1>This will appear when the site is wider than 640px</h1>
+      <h3>The window is now smaller than 640px wide</h2>
+
+    </div>
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <!-->
+        <script src="js/vendor/what-input.min.js"></script>
+    <!-->
+
+    <script src="js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
 </html>
