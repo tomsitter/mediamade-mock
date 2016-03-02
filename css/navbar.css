@@ -1,0 +1,144 @@
+nav {
+  background: white;
+}
+.navbar {
+  padding: 11px 30px;
+  margin: 0 auto;
+  height: 75px;
+}
+
+.navbar .logo {
+  float: left;
+  border: 1px solid white;
+  padding: 0px 0 0 0;
+  margin: 1px 0 0 0;
+  padding: 11px 0 0 0;
+}
+
+.navbar .logo img {
+  height: 30px;
+}
+
+.navbar ul {
+  list-style: none;
+  font-size: 16px;
+  float: right;
+  padding: 0;
+  margin: 10px 10px 0 0 ;
+}
+.navbar ul li {
+  display: inline-block;
+  color: black;
+  text-align: center;
+  width: auto;
+  padding: 7px 0 0 0;
+
+}
+.navbar ul li a {
+  color: black;
+  padding: 15px 15px;
+  margin: 0px 0px 0px 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+
+.mobile-nav {
+  visibility: hidden;
+  margin: 0; padding: 10px 0 0px 0px;
+  width: 100%;
+  position: absolute;
+  margin-top: 50px;
+  padding-bottom: -20px;
+  background: transparent;
+  transform: translateY(-100%);
+  transition-property: transform,visibility,background;
+  transition-duration: 0.0s,0.0s;
+}
+.mobile-nav ul {
+  padding: 0; margin: 0;
+}
+.mobile-nav ul li {
+  visibility: hidden;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  border-top: 1px solid;
+  border-top-color: white;
+  transition-property: visibility, border-top-color;
+  transition-duration: 0.0s;
+
+}
+.mobile-nav ul li a {
+  visibility: hidden;
+  color: white;
+  transition-property: visibility, color;
+  transition-duration: 0.0s;
+}
+
+nav .mobile-btn {
+  display: block;
+  float: right;
+  margin-top: -45px;
+  padding-right: 20px;
+}
+.mobile-btn a {
+  color: black;
+}
+
+nav .bars {
+  display: none;
+}
+nav .close {
+  visibility: hidden;
+  transition-property: all;
+  transition-duration: 0s;
+}
+
+
+
+
+
+@media (max-width:600px) {
+  .navbar {height: 60px; padding: 9px 7px;}
+  .navbar .logo {padding: 6px 0 0 0;}
+  .navbar ul {display: none;}
+  .navbar ul li {margin: 2px 0 0 -5px;}
+  .navbar ul li a{font-size: 14px}
+  nav .bars {display: block;}
+  .bars .is-open{display: none;}
+
+  nav .is-open {
+    visibility: visible;
+    background: white;
+    transform: translateY(0%);
+    transition-property: visibility,background;
+    transition-duration: 0.17s;
+    transition-timing-function:ease-in-out;
+  }
+
+  nav .is-open ul li {
+    visibility: visible;
+    border-top-color:lightgrey;
+    transition-property: visibility, border-top-color;
+    transition-duration: .2s;
+    transition-delay: 0.05s;
+    transition-timing-function: ease-in-out;
+
+  }
+  nav .is-open ul li a {
+    display: block;
+    visibility: visible;
+    padding: 20px 28%;
+    color: black;
+    transition-property: visibility,color;
+    transition-duration: .3s;
+    transition-delay: .2s;
+  }
+  nav .is-open ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition-property: background-color;
+    transition-duration: .3s;
+    transition-delay: 0s;
+  }
+}

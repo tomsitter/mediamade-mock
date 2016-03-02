@@ -1,0 +1,41 @@
+.lsModals {
+  background: white;
+  width: 40%;
+}
+.lsModals h4 {
+  text-align: center;
+}
+.lsModals ul {
+  list-style: none;
+  text-align: center;
+}
+
+.lsModals ul li {
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+.lsModals ul li a {
+  width: 90%;
+}
+.lsModals ul li a span{
+  display: inline-block;
+  font-size: 20px;
+  padding-top: 2px;
+}
+.lsModals ul li a i{
+  font-size: 24px;
+  float: left;
+}
+.lsModals .listLine{
+  padding: 10px 0 0px 0;
+  margin-bottom: 12px;
+  height: 2px;
+  border-bottom: 1px solid lightgrey;
+}
+.lsModals .listLine span{
+  visibility: hidden;
+}
+
+.close-button {
+  padding: 5px 5px 0 0;
+}
