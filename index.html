@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Made</title>
     <link rel="stylesheet" href="foundation-6/css/foundation.min.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/navbar.css" >
@@ -50,6 +50,7 @@
 
   </nav>
 
+
   <div class="HomeBanner">
     <div class="HomeBannerWrap">
       <div class="BannerLeft">
@@ -90,24 +91,94 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="row footerContact">
-      <div class="small-12 medium-3 medium-offset-9 columns">
-        <h5>Contact:</h5>
-          <a href="mailto:info@mediamade.com" target="_top">info@mediamade.com</a>
+
+      <div class="small-12 medium-4 medium-offset-1 columns footerNav">
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Use Cases</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+
+      <div class="small-12 medium-4 medium-offset-2 end columns FooterContact">
+        <h4>Contact:</h4>
+        <div class="contactEmail">
+          <a href="mailto:info@mediamade.com" target="_top"><i class="fa fa-envelope "></i> info@mediamade.com</a>
+        </div>
+        <div class="socialBTNS">
+          <a href="#"><i class="fa fa-facebook-square fa-2x facebookBTN"></i></a>
+          <a href="#"><i class="fa fa-twitter-square fa-2x twitterBTN"></i></a>
+          <a href="#"><i class="fa fa-linkedin-square fa-2x linkedinBTN"></i></a>
+          <a href="#"><i class="fa fa-google-plus-square fa-2x googleBTN"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="bottom">
+      <div class="row ">
+        <div class="small-12 medium-3 medium-offset-1 columns">
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="small-12 medium-3 end columns">
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="small-12 medium-4 columns">
+          © 2015 MediaMade. All rights reserved.
+        </div>
       </div>
     </div>
+
   </footer>
 
   <!-- Modals -->
 
   <div class="reveal lsModals" id="signUpModal" data-reveal>
-    <h4>Sign Up With...</h4>
-    <ul>
-      <li><a href="#" class="button"><i class="fa fa-bars fa-2x"></i><span>Facebook<span></a></li>
-      <li><a href="#" class="button"><i class="fa fa-bars fa-2x"></i><span>Google+<span></a></li>
-      <li><a href="#" class="button"><i class="fa fa-bars fa-2x"></i><span>LinkedIn<span></a></li>
-      <li class="listLine"><span>_<span></li>
-      <li><a href="#" class="button"><i class="fa fa-bars fa-2x"></i><span>Email<span></a></li>
-    </ul>
+    <h3>Continue With</h3>
+    <div class="buttonWrap">
+
+      <a href="#" class="signInButton facebook">
+          <div class="button-icon">
+            <i class="fa fa-facebook-square fa-2x"></i>
+          </div>
+          <div class="button-text">
+            Facebook
+          </div>
+      </a>
+
+      <a href="#" class="signInButton google">
+          <div class="button-icon">
+            <i class="fa fa-google-plus-square fa-2x"></i>
+          </div>
+          <div class="button-text">
+            Google+
+          </div>
+      </a>
+
+      <a href="#" class="signInButton linkedin">
+          <div class="button-icon">
+              <i class="fa fa-linkedin-square fa-2x"></i>
+          </div>
+          <div class="button-text">
+            LinkedIn
+          </div>
+      </a>
+
+      <div class="spacer">
+        Or sign up using:
+      </div>
+
+      <a href="#" class="signInButton email">
+          <div class="button-icon">
+              <i class="fa fa-envelope fa-2x"></i>
+          </div>
+          <div class="button-text">
+            Email
+          </div>
+      </a>
+    </div>
+
 
     <button class="close-button" data-close aria-label="Close modal" type="button">
       <span aria-hidden="true">&times;</span>
@@ -115,14 +186,60 @@
   </div>
 
   <div class="reveal lsModals" id="loginModal" data-reveal>
-    <h4>Log In With...</h4>
-    <ul>
-      <li><a href="#" class="button"><i class="fa fa-bars fa-2x"></i><span>Facebook<span></a></li>
-      <li><a href="#" class="button"><i class="fa fa-bars fa-2x"></i><span>Google+<span></a></li>
-      <li><a href="#" class="button"><i class="fa fa-bars fa-2x"></i><span>LinkedIn<span></a></li>
-      <li class="listLine"><span>_<span></li>
-      <li><a href="#" class="button"><i class="fa fa-bars fa-2x"></i><span>Email<span></a></li>
-    </ul>
+    <h3>Continue With</h3>
+    <div class="buttonWrap">
+
+      <a href="#" class="signInButton facebook">
+          <div class="button-icon">
+            <i class="fa fa-facebook-square fa-2x"></i>
+          </div>
+          <div class="button-text">
+            Facebook
+          </div>
+      </a>
+
+      <a href="#" class="signInButton google">
+          <div class="button-icon">
+            <i class="fa fa-google-plus-square fa-2x"></i>
+          </div>
+          <div class="button-text">
+            Google+
+          </div>
+      </a>
+
+      <a href="#" class="signInButton linkedin">
+          <div class="button-icon">
+              <i class="fa fa-linkedin-square fa-2x"></i>
+          </div>
+          <div class="button-text">
+            LinkedIn
+          </div>
+      </a>
+
+      <div class="spacer">
+        Or login with:
+      </div>
+      <div class="loginForm">
+        <form class="" action="index.html" method="post">
+          <div class="input-group">
+            <span class="input-group-label"><i class="fa fa-user"></i></span>
+            <input class="input-group-field" type="text" placeholder="Username">
+          </div>
+          <div class="input-group">
+            <span class="input-group-label"><i class="fa fa-lock"></i></span>
+            <input class="input-group-field" type="text" placeholder="Password">
+          </div>
+          <a href="#" class="signInButton loginBTN">
+              <div class="button-text">
+                Login
+              </div>
+          </a>
+        </form>
+
+      </div>
+
+
+    </div>
 
     <button class="close-button" data-close aria-label="Close modal" type="button">
       <span aria-hidden="true">&times;</span>

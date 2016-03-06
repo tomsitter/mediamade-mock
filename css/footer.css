@@ -4,13 +4,111 @@
 
 .footer {
   background-color: #2980b9;
-  background-color: lightgrey;
-  min-height: 100px;
-  padding: 0rem 0rem;
+  background-color: #F4F8FA;
+  border-top: 1px solid lightgrey;
+  min-height: 90px;
+  padding: 0;
   margin: 0;
   color: #black;
 }
 
+.footerNav ul {
+  list-style: none;
+}
+
+.footerNav ul li {
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.footerNav ul li a {
+  color: rgba(0, 0, 0, 1);
+  padding: 10px 10px;
+  transition: all 0.5s;
+}
+
+.footerNav ul li a:hover {
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+
+
+
 .footerContact  {
-  padding: 20px 0 0px;
+  padding: 1% 3% 0% 3%;
+  text-align: center;
+}
+
+.socialBTNS a i{
+  padding: 0px 10px 10px 10px;
+}
+
+.facebookBTN {
+  color: rgba(59, 87, 157, 0.8);
+  transition: 0.4s;
+}
+.facebookBTN:hover {
+  color: rgba(59, 87, 157, 1);
+  transition: 0.4s;
+}
+
+.twitterBTN {
+  color: rgba(104, 202, 234, 0.8);
+  transition: 0.4s;
+}
+.twitterBTN:hover {
+  color: rgba(104, 202, 234, 1);
+  transition: 0.4s;
+}
+
+.googleBTN {
+  color: rgba(234, 67, 53, 0.8);
+  transition: 0.4s;
+}
+.googleBTN:hover {
+  color: rgba(234, 67, 53, 1);
+  transition: 0.4s;
+}
+
+.linkedinBTN:hover {
+  color: rgba(0, 119, 181, 0.8);
+  transition: all 0.4s;
+}
+.linkedinBTN:hover {
+  color: rgba(0, 119, 181, 1);
+  transition: all 0.4s;
+}
+
+.contactEmail {
+  margin: 0px 0 20px 0;
+}
+.contactEmail a {
+  color: rgba(0, 119, 181, 0.8);
+  padding: 10px;
+  transition: all 0.5s;
+}
+.contactEmail a:hover {
+  color: rgba(0, 119, 181, 1);
+  transition: all 0.7s;
+}
+
+.bottom {
+  width: 100%;
+  background-color: lightgrey;
+}
+
+.bottom div {
+  padding: 10px 0 10px 0;
+}
+.bottom div:last-child{
+  padding-bottom: 0px;
+}
+.bottom a {
+  color: black;
+}
+
+@media (max-width:40em) {
+  .bottom div {
+    text-align: center;
+  }
 }

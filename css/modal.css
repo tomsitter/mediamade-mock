@@ -1,41 +1,115 @@
 .lsModals {
   background: white;
   width: 40%;
+  max-width: 400px;
 }
-.lsModals h4 {
+.lsModals h3 {
+  font-size: 26px;
   text-align: center;
-}
-.lsModals ul {
-  list-style: none;
-  text-align: center;
-}
-
-.lsModals ul li {
-  margin: 0;
-  padding: 10px 0 0 0;
-}
-.lsModals ul li a {
-  width: 90%;
-}
-.lsModals ul li a span{
-  display: inline-block;
-  font-size: 20px;
-  padding-top: 2px;
-}
-.lsModals ul li a i{
-  font-size: 24px;
-  float: left;
-}
-.lsModals .listLine{
-  padding: 10px 0 0px 0;
-  margin-bottom: 12px;
-  height: 2px;
-  border-bottom: 1px solid lightgrey;
-}
-.lsModals .listLine span{
-  visibility: hidden;
 }
 
 .close-button {
   padding: 5px 5px 0 0;
+}
+
+.signInButton {
+  color: white;
+  padding: 11px 0px 11px 40px;
+  display: block;
+  max-width: 300px;
+  margin: 13px auto 13px auto;
+}
+.button-icon {
+  display: inline-block;
+  font-size: 22px;
+  width: 10%;
+  padding: 0;
+}
+
+.button-text {
+  display: inline-block;
+  vertical-align:bottom;;
+  font-size: 30px;
+  width: 75%;
+  padding: 0 0 0 27px ;
+}
+
+.signInButton:hover {
+  color: white;
+}
+
+.facebook {
+  background-color: #3B589D;
+  background-color: rgba(59, 87, 157, 0.9);
+}
+
+.facebook:hover {
+  background-color: rgba(59, 87, 157, 1);
+  transition: 0.15s;
+}
+
+.google {
+  background-color: #3B589D;
+  background-color: rgba(234, 67, 53, 0.9);
+}
+
+.google:hover {
+  background-color: rgba(234, 67, 53, 1);
+  transition: 0.15s;
+}
+
+.linkedin {
+  background-color: #3B589D;
+  background-color: rgba(0, 119, 181, 0.9);
+}
+
+.linkedin:hover {
+  background-color: rgba(0, 119, 181, 1);
+  transition: 0.15s;
+}
+
+.spacer {
+  padding: 0;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: darkgrey;
+  max-width: 300px;
+  padding: 10px 0 0 0;
+  margin: 20px auto 10px auto;
+  border-top: 1px solid darkgrey;
+}
+
+.email {
+  background-color: #3B589D;
+  background-color: rgba(31, 62, 88, 0.9);
+}
+.email .button-text {
+  padding-left: 45px;
+}
+
+.email:hover {
+  background-color: #336B96;
+  transition: 0.15s;
+}
+
+.loginForm {
+  padding: 0;
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  color: darkgrey;
+  max-width: 300px;
+  margin: 0 auto 0 auto;
+}
+.loginForm .loginBTN {
+  padding: 0;
+  width: 50%;
+  background-color: rgba(31, 62, 88, 0.9);
+}
+.loginForm .loginBTN .button-text{
+  display: block;
+  text-align: center;
+  padding: 5px 5px 5px 5px;
+  margin: auto;
 }
