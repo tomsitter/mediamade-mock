@@ -3,6 +3,8 @@ body {
 	background: white;
 	padding: 0;
 	margin: 0;
+	line-height: 1.7;
+
 }
 .row2 {
 	padding-top: 2em;
@@ -21,7 +23,17 @@ body {
     background-color: dodgerblue ;
     background: linear-gradient(to bottom, dodgerblue, lightblue 90%);
 		background: #336B96;
+		letter-spacing: 0.5px;
 }
+
+.HomeBanner h2 {
+	font-size: 32px;
+	padding: 20px 0;
+}
+.HomeBanner p {
+	padding-bottom: 10px;
+}
+
 
 .HomeBannerWrap {
 	width: 90%;
@@ -40,10 +52,32 @@ body {
 .BannerRight {
 		display: inline-block;
 		vertical-align: top;
-		width: 45%;
+		width: 50%;
     color: white;
 		padding: 0 0 0 100px;
-		margin: 0 0 0 0;
+		margin: 0 0 0 5px;
+}
+
+.BannerRight a {
+	margin: auto;
+	background: transparent;
+	border: 1px solid azure;
+	border-radius: 5px;
+	width: 200px;
+	height: 48px;
+}
+.ctaBtns {
+	padding-top: 15px;
+}
+
+.ctaBtns a {
+	padding: 0;
+}
+
+
+.ctaBtns i {
+	font-size: 28px;
+	padding: 10px 10px;
 }
 
 
@@ -85,6 +119,11 @@ body {
 		font-size: 28px;
 		padding-top: 10px;
 	}
+	.BannerRight h4 {
+		font-size: 24px;
+		padding-top: 0;
+	}
+
 }
 
 @media (max-width:40em) {

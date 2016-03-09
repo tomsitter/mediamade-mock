@@ -4,8 +4,9 @@
   max-width: 400px;
 }
 .lsModals h3 {
-  font-size: 26px;
+  font-size: 24px;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
 .close-button {
@@ -14,24 +15,27 @@
 
 .signInButton {
   color: white;
-  padding: 11px 0px 11px 40px;
+  padding: 0px 0px 0px 10px;
   display: block;
-  max-width: 300px;
+  max-width: 200px;
   margin: 13px auto 13px auto;
 }
 .button-icon {
   display: inline-block;
-  font-size: 22px;
-  width: 10%;
+  vertical-align:middle;
+  font-size: 30px;
+  width: 23px;
   padding: 0;
 }
 
 .button-text {
   display: inline-block;
-  vertical-align:bottom;;
-  font-size: 30px;
+  vertical-align:middle;
+  font-size: 24px;
   width: 75%;
-  padding: 0 0 0 27px ;
+  border-left: 1px solid lightgrey;
+  padding: 0 0 0 15px ;
+  margin: 0 0 0 10px ;
 }
 
 .signInButton:hover {
@@ -85,7 +89,7 @@
   background-color: rgba(31, 62, 88, 0.9);
 }
 .email .button-text {
-  padding-left: 45px;
+  padding-left: 30px;
 }
 
 .email:hover {
@@ -109,6 +113,7 @@
 }
 .loginForm .loginBTN .button-text{
   display: block;
+  border-left: none;
   text-align: center;
   padding: 5px 5px 5px 5px;
   margin: auto;

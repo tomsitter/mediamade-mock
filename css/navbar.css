@@ -1,5 +1,5 @@
 nav {
-  background: white;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 .navbar {
   padding: 11px 30px;
@@ -33,9 +33,12 @@ nav {
   width: auto;
   padding: 7px 0 0 0;
 
+
 }
 .navbar ul li a {
-  color: black;
+  color: #3F3F3F;
+  letter-spacing: 0.5px;
+  line-height: 1.7;
   padding: 15px 15px;
   margin: 0px 0px 0px 10px;
   border: 1px solid white;
