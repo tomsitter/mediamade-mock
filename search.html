@@ -4,24 +4,51 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MediaMade - Search</title>
-    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/foundation.min.css" />
     <link rel="stylesheet" href="css/fontawesome-stars.css" />
     <link rel="stylesheet" href="css/jquery-ui.min.css" />
     <link rel="stylesheet" href="css/jquery-ui.structure.min.css" />
-    <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css" />  
 
     <script src="js/vendor/modernizr.js"></script>
-    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>    
     <script src="js/vendor/jquery-ui.min.js"></script>
-    <script src="js/foundation/foundation.js"></script>
-    <script src="js/foundation/foundation.equalizer.js"></script>
-
-
+    <script src="js/foundation.min.js"></script>
 
     <!-- Icons -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/app.css" />
+    <!-- Menu script -->
+    <script>
+        $(document).ready(function(){
+            $(".menu-icon").click(function(){
+                if ( $( ".heading" ).attr("topped") == 'true' ) {
+                    $( ".heading" ).css("margin-top", "6.250rem")
+                    $( ".heading" ).attr( "topped" , false); 
+                }else{
+                    $(".heading").css("margin-top", "0");
+                    $( ".heading" ).attr( "topped" , true); 
+                }
+            });
+        });
+    </script>
+    <!-- Advanced Search script -->
+    <script>
+        $(document).ready(function(){
+            $("#advsrch").click(function(){
+                if ( $( "#advsrch" ).attr("closed") == 'true' ) {
+                    $("#date-search").slideToggle("slow");
+                    $("#advsrch").text("Close");
+                    $( "#advsrch" ).attr( "closed" , false); 
+                }else{
+                    $("#date-search").slideToggle("slow");
+                    $("#advsrch").text("Advanced Search");
+                    $( "#advsrch" ).attr( "closed" , true);
+                }
+            });
+        });
+    </script>
 
     <script>
         $(document).ready(function() {
@@ -72,34 +99,34 @@
               numberOfMonths: 1,
               onClose: function( selectedDate ) {
                 $( "#to" ).datepicker( "option", "minDate", selectedDate );
-              }
-            });
+            }
+        });
             $( "#to" ).datepicker({
               defaultDate: "+1w",
               changeMonth: true,
               numberOfMonths: 1,
               onClose: function( selectedDate ) {
                 $( "#from" ).datepicker( "option", "maxDate", selectedDate );
-              }
-            });
+            }
+        });
 
         });
     </script>
 </head>
+
 <body>
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li class="name"></li>
-        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-      </ul>
-      <section class="top-bar-section">
-        <ul>
-          <li class="active"><a href="jones.html">Home</a></li>
-          <li ><a  href="index.html">Sign out</a></li>
-          <li ><a  href="jones.html">Inbox</a></li>
-        </ul>
-      </section>
-    </nav>
+    <div class="title-bar" data-responsive-toggle="burgermenu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
+  </div>
+  <div class="top-bar" id="burgermenu">
+    <ul class="vertical medium-horizontal menu" data-dropdown-menu>
+        <li class="active"><a href="jones.html">Home</a></li>
+        <li><a href="index.html">Sign out</a></li>
+        <li><a href="jones.html">Inbox</a></li>
+    </ul>  
+</div>
+
     <!-- <div id="search-bar" class="row top-padded" data-equalizer>
         <div class="medium-8 columns" data-equalizer-watch>
             <div class="row collapse">
@@ -116,266 +143,266 @@
         </div>
     </div> -->
 
-    <h3 class="text-center">Search</h3>
-    <section class="row top-padded" id="advanced-search">
-        <div class="small-12 columns">
+    <h3 class="text-center heading" topped=true>Search</h3> 
+    <section class="row top-padded"  id="advanced-search">
+        <div class="small-12 medium-12 columns">
             <div id="services" class="row top-padded">
-                <div class="medium-2 columns">
-                    <label for="right-label" class="right small-only-text-left inline">Services</label>
-                </div>
-                <div class="medium-10 columns">
-                    <div class="row">
-                        <div class="small-4 columns">
-                            <a href="#" class="service"><i class="fa fa-check fa-inline video"></i>Video</a>
-                        </div>
-                        <div class="small-4 columns">
-                            <a href="#" class="service"><i class="fa fa-check fa-inline audio"></i>Audio</a>
-                        </div>
-                        <div class="small-4 columns">
-                            <a href="#" class="service"><i class="fa fa-check fa-inline photo"></i>Photography</a>
-                        </div>
-                        
-                    </div>
+                <form>
+                <div class="medium-12 columns">
+                <div class="row">
+                <div class="small-12 columns"><label>Services</label><br></div>               
+                    <div class="small-5 medium-12 columns first">                    
+	                            <div class="medium-3 columns">
+	                                <a href="#" class="service"><i class="fa fa-check fa-inline video"></i>Video</a>
+	                            </div>
+	                            <div class="medium-3 columns">
+	                                <a href="#" class="service"><i class="fa fa-check fa-inline audio"></i>Audio</a>
+	                            </div>
+	                            <div class="medium-3 columns end">
+	                                <a href="#" class="service"><i class="fa fa-check fa-inline photo"></i>Photography</a>
+	                            </div>
+ 					</div>
 
-                    <div class="row">
-                        <div class="small-4 columns">
-                            <a href="#" class="service"><i class="fa fa-check fa-inline sfx"></i>Special Effects</a>
-                        </div>
-                        <div class="small-4 columns">
-                            <a href="#" class="service"><i class="fa fa-check fa-inline pfx"></i>Practical Effects</a>
-                        </div>
-                        <div class="small-4 columns">
-                            <a href="#" class="service"><i class="fa fa-check fa-inline aerial"></i>Aerial</a>
-                        </div>
-                    </div>
-                    
-                    <div id="audio-alert" class="row">
-                        <div class="small-12 columns">
-                            <div data-alert class="alert-box info radius">
-                                Audio is required to record interviews and voiceovers.
-                                <a href="#" class="close">&times;</a>
+  					<div class="small-5 medium-12 end columns first">
+	                            <div class="medium-3 columns">
+	                                <a href="#" class="service"><i class="fa fa-check fa-inline sfx"></i>Special Effects</a>
+	                            </div>
+	                            <div class="medium-3 columns">
+	                                <a href="#" class="service"><i class="fa fa-check fa-inline pfx"></i>Practical Effects</a>
+	                            </div>
+	                            <div class="medium-3 columns end">
+	                                <a href="#" class="service"><i class="fa fa-check fa-inline aerial"></i>Aerial</a>
+	                            </div>
+         			</div>
+         			</div> 
+
+                        <div id="audio-alert" class="row">
+                            <div class="small-12 columns">
+                                <div data-alert class="callout" id="servicescall">
+                                    <button class="close-button" aria-label="Close alert" type="button">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    Audio is required to record interviews and voiceovers.
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </form>
             </div>
-            
 
             <div id="max-budget" class="row top-padded">
-
-                <div class="medium-2 columns">
-                  <label for="right-label" class="right small-only-text-left inline">Budget</label>
+                <div class="medium-3 columns budget">
+                   <label>Budget</label>
+                   <div class="input-group">
+                        <span class="input-group-label">$</span>
+                        <input class="input-group-field" type="url">
+                    </div>
                 </div>
-                <div class="medium-2 columns">
-                  <input type="text" id="right-label" class="left inline" placeholder="$">
-                </div>
-                <div class="medium-1 columns">
-                  <label for="right-label" class="small-only-text-left text-center inline">to</label>
-                </div>
-                <div class="medium-2 pull-5 columns">
-                  <input type="text" id="right-label" class="left inline" placeholder="$">
-                </div>
-            </div>
-
-            <div id="keyword-search" class="row">
-                <div class="medium-2 columns">
-                  <label for="right-label" class="right small-only-text-left inline">Keywords</label>
-                </div>
-                <div class="medium-10 columns">
-                  <input type="text" id="right-label" placeholder="seperate, keywords, by, commas">
+                <div class="medium-3 columns end budget">
+                    <label>To</label>
+                    <div class="input-group">
+                        <span class="input-group-label">$</span>
+                        <input class="input-group-field" type="url">
+                    </div>            
                 </div>
             </div>
 
-            <div id="location-search" class="row">
-                <div class="medium-2 columns">
-                  <label for="right-label" class="right small-only-text-left inline">Location</label>
-                </div>
-                <div class="medium-4 columns">
-                  <input type="text" id="right-label" placeholder="">
-                </div>
-                <div class="medium-3 columns">
-                    <input type="checkbox" id="preferred"><label  class="inline" for="preferred">Preferred</label>
-                </div>
-                <div class="medium-3 columns">
-                    <input type="checkbox" id="locatedin"><label class="inline" for="locatedin">Located In</label>
-                </div>
-            </div> 
-
-            <div id="name-search" class="row">
-                <div class="medium-2 columns">
-                  <label id='name-search-label' for="right-label" class="right small-only-text-left inline">Production Company or Freelancer</label>
-                </div>
-                <div class="medium-10 columns">
-                  <input type="text" id="right-label" placeholder="">
-                </div>
-            </div>
-
-            <div id="date-search" class="row">
-                <div class="medium-2 columns">
-                    <label for="right-label" class="right small-only-text-left inline">Available From</label>
-                </div>
-                <div class="medium-2 columns">
-                    <input class="inline" type="text" id="from" name="from">
-                </div>
-                <div class="medium-1 columns">
-                    <label class="inline text-center small-only-text-left" for="to">To</label>
-                </div>
-                <div class="medium-2 pull-5 columns">
-                    <input class=" left inline" type="text" id="to" name="to">
-                </div>
-
-            </div>
-
-            <div id="search-button" class="row">
-                <div class="small-12 columns">
-                    <a id="search-button" href="#" class="button postfix">Search</a>
-                </div>
+        <div id="keyword-search" class="row">    
+          <div class="medium-12 columns">
+                <label>Keywords</label>
+                <input type="text" id="right-label" placeholder="seperate, keywords, by, commas">
             </div>
         </div>
-    </section>
+
+        <div id="location-search" class="row">   
+            <div class="medium-9 columns">
+                <label>Location</label>
+                <input type="text" id="right-label" placeholder="">
+            </div>
+            <div class="medium-3 columns end checks">
+                <input type="radio" name="locate" id="preferred"><label for="preferred">Preferred</label>
+                <input type="radio" name="locate" id="locatedin"><label for="locatedin">Located In</label>
+            </div>
+        </div> 
+        <div id="name-search" class="row">    
+            <div class="medium-9 columns">
+                <label for="">Production Company or Freelancer</label>
+                <input type="text" id="right-label" placeholder="">
+            </div>
+        </div>
+
+        <div id="date-search" class="row">
+            <div class="medium-12 columns">
+                <label for="available">Available</label>
+            </div>
+            <div class="small-2 medium-2 columns calendar">
+                <label for="from">From</label>
+                <input class="inline" type="text" id="from" name="from">
+            </div>
+            <div class="small-2 medium-2 columns end calendar">
+                <label for="to">To</label>
+                <input type="text" id="to" name="to">
+            </div>
+            <fieldset class="medium-12 columns">
+              <input id="checkbox1" type="checkbox"><label for="checkbox1">Expedited turnaround available</label>      
+            </fieldset>
+
+            <fieldset class="large-12 columns">
+                <input type="radio" name="product" value="finished" id="finished" checked="checked"><label for="finished">I would like a finished product</label>
+                <input type="radio" name="product" value="edit" id="edit"><label for="edit">I would like to have the raw product to be edited elsewhere</label>
+            </fieldset>
+        </div>
+        <div class="medium-12 columns"><button id="advsrch" closed=true >Advanced Search</button></div>
+
+        <div id="search-button" class="row">
+            <div class="small-12 columns">
+                <a id="search-button" href="#" class="expanded button">Search</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
 
     <div id="searching" class="row text-center top-padded">
         <i class="fa fa-spinner"></i>
     </div>
     <div id="sortby" class="row top-padded">
-        <div class="small-4 push-8">
+        <div class="small-4 float-right filter">
             <label>Sort By
               <select>
                 <option value="rating">Highest Rating</option>
                 <option value="highest">Most to Least Expensive</option>
                 <option value="least">Least to Most Expensive</option>
                 <option value="reviews">Most Reviews</option>
-              </select>
-            </label>
+            </select>
+        </label>
+    </div>
+    </div>
+<div id="search-results" class="row">
+    <div id="results-panel" class="small-12 columns">
+        <div class="search-result row">
+            <div class="small-12 columns">
+                <div class="row">
+                    <div class="portrait medium-3 columns">
+                        <a href="badsitter.html">
+                            <img id="link-badsitter" class="result-portrait thumbnail" src="img/badsitter_logo.png">
+                        </a>
+                        <div class="br-wrapper br-theme-fontawesome-stars search-rating">
+                            <div class="br-widget text-center">
+                                <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
+                                <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
+                                <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected"></a>
+                                (20)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description medium-9 columns">
+                        <div class="writeup">
+                            <strong>Bad Sitter Media     |      Thunder Bay, ON</strong>
+                            <p>Bad Sitter Media creates content for dealerships. We specialize in digital, television, and audio content that target your customer while complimenting the medium of consumption. Bad Sitter's enthusiastic team of creative professionals conceptualizes, develops and produces captivating content to fit the specific requirement of every individual campaign</p>
+                        </div>
+                        <ul class="no-bullet">
+                            <li>Day Rate: $1000</li>
+                            <li>Approximately 2 minutes finished product</li>
+                        </ul>
+                        <ul class="no-bullet inlinelist">
+                            <li><i class="fa fa-check fa-inline checked"></i> Video</li>
+                            <li><i class="fa fa-check fa-inline checked"></i> Audio</li>
+                            <li><i class="fa fa-check fa-inline checked"></i> Photography</li>
+                            <li><i class="fa fa-check fa-inline checked"></i> Aerial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="search-result row">
+            <div class="small-12 columns">
+                <div class="row">
+                    <div class="portrait medium-3 columns">
+                        <img class="result-portrait thumbnail" src="img/fasttop.jpg">
+                        <div class="br-wrapper br-theme-fontawesome-stars search-rating">
+                            <div class="br-widget text-center">
+                                <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
+                                <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
+                                <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected"></a>
+                                (12)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description medium-9 columns">
+                        <div class="writeup">
+                            <strong>FASTTOP Productions     |      Thunder Bay, ON</strong>
+                            <p>FASTTOP is a media company specializing in television and audio content. Our team of creative professionals develops and produces captivating content that can meet the needs of any campaign</p>
+                        </div>
+                        <ul class="no-bullet">
+                            <li>Day Rate: $2500</li>
+                            <li>Approximately 30 seconds finished product</li>
+                        </ul>
+                        <ul class="no-bullet inlinelist">
+                            <li><i class="fa fa-check fa-inline checked"></i> Video</li>
+                            <li><i class="fa fa-check fa-inline checked"></i> Audio</li>
+                            <li><i class="fa fa-check fa-inline checked"></i> Photography</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-result row">
+            <div class="small-12 columns">
+                <div class="row">
+                    <div class="portrait medium-3 columns">
+                        <img class="result-portrait thumbnail" src="img/vision.jpg">
+                        <div class="br-wrapper br-theme-fontawesome-stars search-rating">
+                            <div class="br-widget text-center">
+                                <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
+                                <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
+                                <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
+                                <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
+                                <a href="#" data-rating-value="5" data-rating-text="5" class=""></a>
+                                (5)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description medium-9 columns">
+                        <div class="reiteup">
+                            <strong>Vision Creativa     |      Thunder Bay, ON</strong>
+                            <p>We produce high quality content for television and online media with top of the line equipment and special effects. We've been in busines since 2010 and have a history of high-quality productions and satisfied customers.</p>
+                        </div>
+                        <ul class="no-bullet">
+                            <li>Day Rate: $5000</li>
+                            <li>Approximately 1 minute finished product</li>
+                        </ul>
+                        <ul class="no-bullet inlinelist">
+                            <li><i class="fa fa-check fa-inline checked"></i> Video</li>
+                            <li><i class="fa fa-check fa-inline checked"></i> Audio</li>
+                            <li><i class="fa fa-check fa-inline checked"></i> Special Effects</li>
+                            <li><i class="fa fa-check fa-inline checked"></i> Practical Effects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end result-panel columns -->
+</div> <!-- end search-results -->
+
+<footer class="footer">
+    <div class="row full-width small-text-center">
+        <div class="columns medium-8 small-12 text-left">
+            <p>© 2015 MediaMade. All rights reserved.</p>
+        </div>
+        <div class="columns medium-4 small-12 text-right small-only-text-center">
+            <a href="http://www.twitter.com" class="fa fa-twitter fa-lg social"></a>
+            <a href="http://www.facebook.com" class="fa fa-facebook fa-lg social"></a>
+            <a href="http://www.tomsitter.ca" class="fa fa-envelope fa-lg social"></a>
         </div>
     </div>
-    <div id="search-results" class="row">
-        <div id="results-panel" class="small-12 columns">
-            <div class="search-result row">
-                <div class="small-12 columns">
-                    <div class="row">
-                        <div class="portrait medium-3 columns">
-                            <a href="badsitter.html">
-                                <img id="link-badsitter" class="result-portrait th" src="img/badsitter_logo.png">
-                            </a>
-                             <div class="br-wrapper br-theme-fontawesome-stars search-rating">
-                                <div class="br-widget text-center">
-                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
-                                    <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
-                                    <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
-                                    <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
-                                    <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected"></a>
-                                    (20)
-                                </div>
-                            </div>
-                        </div>
-                        <div class="description medium-9 columns">
-                            <div class="writeup">
-                                <strong>Bad Sitter Media     |      Thunder Bay, ON</strong>
-                                <p>Bad Sitter Media creates content for dealerships. We specialize in digital, television, and audio content that target your customer while complimenting the medium of consumption. Bad Sitter's enthusiastic team of creative professionals conceptualizes, develops and produces captivating content to fit the specific requirement of every individual campaign</p>
-                            </div>
-                            <ul class="no-bullet">
-                                <li>Day Rate: $1000</li>
-                                <li>Approximately 2 minutes finished product</li>
-                            </ul>
-                            <ul class="inline-list">
-                                <li><i class="fa fa-check fa-inline checked"></i> Video</li>
-                                <li><i class="fa fa-check fa-inline checked"></i> Audio</li>
-                                <li><i class="fa fa-check fa-inline checked"></i> Photography</li>
-                                <li><i class="fa fa-check fa-inline checked"></i> Aerial</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            <div class="search-result row">
-                <div class="small-12 columns">
-                    <div class="row">
-                        <div class="portrait small-3 columns">
-                            <img class="result-portrait th" src="img/fasttop.jpg">
-                             <div class="br-wrapper br-theme-fontawesome-stars search-rating">
-                                <div class="br-widget text-center">
-                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
-                                    <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
-                                    <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
-                                    <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
-                                    <a href="#" data-rating-value="5" data-rating-text="5" class="br-selected"></a>
-                                    (12)
-                                </div>
-                            </div>
-                        </div>
-                        <div class="description small-9 columns">
-                            <div class="writeup">
-                                <strong>FASTTOP Productions     |      Thunder Bay, ON</strong>
-                                <p>FASTTOP is a media company specializing in television and audio content. Our team of creative professionals develops and produces captivating content that can meet the needs of any campaign</p>
-                            </div>
-                            <ul class="no-bullet">
-                                <li>Day Rate: $2500</li>
-                                <li>Approximately 30 seconds finished product</li>
-                            </ul>
-                            <ul class="inline-list">
-                                <li><i class="fa fa-check fa-inline checked"></i> Video</li>
-                                <li><i class="fa fa-check fa-inline checked"></i> Audio</li>
-                                <li><i class="fa fa-check fa-inline checked"></i> Photography</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="search-result row">
-                <div class="small-12 columns">
-                    <div class="row">
-                        <div class="portrait small-3 columns">
-                            <img class="result-portrait th" src="img/vision.jpg">
-                             <div class="br-wrapper br-theme-fontawesome-stars search-rating">
-                                <div class="br-widget text-center">
-                                    <a href="#" data-rating-value="1" data-rating-text="1" class="br-selected"></a>
-                                    <a href="#" data-rating-value="2" data-rating-text="2" class="br-selected"></a>
-                                    <a href="#" data-rating-value="3" data-rating-text="3" class="br-selected"></a>
-                                    <a href="#" data-rating-value="4" data-rating-text="4" class="br-selected"></a>
-                                    <a href="#" data-rating-value="5" data-rating-text="5" class=""></a>
-                                    (5)
-                                </div>
-                            </div>
-                        </div>
-                        <div class="description small-9 columns">
-                            <div class="reiteup">
-                                <strong>Vision Creativa     |      Thunder Bay, ON</strong>
-                                <p>We produce high quality content for television and online media with top of the line equipment and special effects. We've been in busines since 2010 and have a history of high-quality productions and satisfied customers.</p>
-                            </div>
-                            <ul class="no-bullet">
-                                <li>Day Rate: $5000</li>
-                                <li>Approximately 1 minute finished product</li>
-                            </ul>
-                            <ul class="inline-list">
-                                <li><i class="fa fa-check fa-inline checked"></i> Video</li>
-                                <li><i class="fa fa-check fa-inline checked"></i> Audio</li>
-                                <li><i class="fa fa-check fa-inline checked"></i> Special Effects</li>
-                                <li><i class="fa fa-check fa-inline checked"></i> Practical Effects</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end result-panel columns -->
-    </div> <!-- end search-results -->
-    
-    <footer class="footer">
-        <div class="row full-width small-text-center">
-            <div class="columns medium-8 small-12 text-left">
-                <p>© 2015 MediaMade. All rights reserved.</p>
-            </div>
-            <div class="columns medium-4 small-12 text-right small-only-text-center">
-                <a href="http://www.twitter.com" class="fa fa-twitter fa-lg social"></a>
-                <a href="http://www.facebook.com" class="fa fa-facebook fa-lg social"></a>
-                <a href="http://www.tomsitter.ca" class="fa fa-envelope fa-lg social"></a>
-            </div>
-        </div>
-    </footer>
-
+</footer>   
 
 </body>
 </html>
