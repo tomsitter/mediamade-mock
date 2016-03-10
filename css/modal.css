@@ -2,23 +2,36 @@
   background: white;
   width: 40%;
   max-width: 400px;
+  padding: 0;
 }
 .lsModals h3 {
-  font-size: 24px;
   text-align: center;
+  font-size: 24px;
   letter-spacing: 0.5px;
+  padding: 10px 0;
+  margin: 0 0 20px 0;
+  background: white;
+  color: #3F3F3F;
+  box-shadow: 2px 0 3px darkgrey;
+
 }
 
 .close-button {
-  padding: 5px 5px 0 0;
+  padding: 0px 5px 0 0;
 }
 
 .signInButton {
-  color: white;
+  color:  white;
+  background-color: #FCFFFC;
   padding: 0px 0px 0px 10px;
   display: block;
   max-width: 200px;
   margin: 13px auto 13px auto;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px azure;
+  transform: scale(1);
+  transition: 0.5s;
 }
 .button-icon {
   display: inline-block;
@@ -33,13 +46,9 @@
   vertical-align:middle;
   font-size: 24px;
   width: 75%;
-  border-left: 1px solid lightgrey;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0 0 0 15px ;
   margin: 0 0 0 10px ;
-}
-
-.signInButton:hover {
-  color: white;
 }
 
 .facebook {
@@ -47,29 +56,14 @@
   background-color: rgba(59, 87, 157, 0.9);
 }
 
-.facebook:hover {
-  background-color: rgba(59, 87, 157, 1);
-  transition: 0.15s;
-}
-
 .google {
   background-color: #3B589D;
   background-color: rgba(234, 67, 53, 0.9);
 }
 
-.google:hover {
-  background-color: rgba(234, 67, 53, 1);
-  transition: 0.15s;
-}
-
 .linkedin {
   background-color: #3B589D;
   background-color: rgba(0, 119, 181, 0.9);
-}
-
-.linkedin:hover {
-  background-color: rgba(0, 119, 181, 1);
-  transition: 0.15s;
 }
 
 .spacer {
@@ -86,15 +80,11 @@
 
 .email {
   background-color: #3B589D;
-  background-color: rgba(31, 62, 88, 0.9);
-}
-.email .button-text {
-  padding-left: 30px;
+  background-color: rgba(31, 62, 88, 0.8);
 }
 
-.email:hover {
-  background-color: #336B96;
-  transition: 0.15s;
+.email .button-text {
+  padding-left: 30px;
 }
 
 .loginForm {
@@ -117,4 +107,29 @@
   text-align: center;
   padding: 5px 5px 5px 5px;
   margin: auto;
+}
+
+
+.signInButton:hover {
+  color: white;
+  box-shadow: 1px 1px 4px lightgrey;
+}
+
+.facebook:hover {
+  background-color: rgba(59, 87, 157, 1);
+  color: #white;
+}
+
+.google:hover {
+  background-color: rgba(234, 67, 53, 1);
+  transition: 0.15s;
+}
+
+.linkedin:hover {
+  background-color: rgba(0, 119, 181, 1);
+  transition: 0.15s;
+}
+.email:hover {
+  background-color: rgba(31, 62, 88, 0.9);
+  transition: 0.15s;
 }

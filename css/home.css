@@ -1,22 +1,9 @@
-
 body {
 	background: white;
 	padding: 0;
 	margin: 0;
 	line-height: 1.7;
-
 }
-.row2 {
-	padding-top: 2em;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-bottom: 5em;
-}
-
-.row2 img {
-	padding: 0 0 10px 0;
-}
-
 
 .HomeBanner {
     padding: 5rem 0 5rem 0;
@@ -30,7 +17,6 @@ body {
 	font-size: 32px;
 	padding: 0px 0;
 }
-
 
 .HomeBannerWrap {
 	width: 90%;
@@ -63,18 +49,30 @@ body {
 	width: 200px;
 	height: 48px;
 }
+
 .ctaBtns {
 	padding-top: 15px;
 }
 
 .ctaBtns a {
 	padding: 0;
+	color: white;
 }
-
 
 .ctaBtns i {
 	font-size: 28px;
 	padding: 10px 10px;
+}
+
+.ctaBTN {
+	display: inline-block;
+	border: 1px solid white;
+	transition: 0.25s;
+}
+.ctaBTN:hover {
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	background: rgba(0, 119, 201, 1);
+	box-shadow: 0 1px 3px rgba(180, 180, 180, 0.2);
 }
 
 
@@ -84,6 +82,19 @@ body {
 .HomeCenter  h2 {
   padding: .5em 0 0.1em;
 }
+
+.row2 {
+	padding-top: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-bottom: 5em;
+}
+
+.row2 img {
+	padding: 0 0 10px 0;
+}
+
+
 
 @media (max-width:1080px) {
 	.BannerRight	{
